@@ -8,7 +8,7 @@ $infoBg:rgb(100 108 255 /8%);
 $infoColor:#bcc0ff;
 $infoBorder:#646cff;
 // ** Warning
-$warningBg:rgb(255 197 23 /5%);
+$warningBg:rgba(255, 197, 23, 0.11);
 $warningColor:#fcd253;
 $warningBorder:rgba(255,213,0,0.793);
 
@@ -19,7 +19,7 @@ $errorColor:#ef8d8dfa ;
 $errorBorder:rgba(255, 25, 0, 0.322);
 // **Success
 
-$sucessBg:rgba(246,238,9,0.127);
+$sucessBg:rgba(46, 44, 3, 0.425);
 $sucessColor:#7acf58d6;
 $sucessBorder:rgba(0,255,0,0.322);
 
@@ -57,10 +57,14 @@ $sucessBorder:rgba(0,255,0,0.322);
         margin-top: 1.2rem;
         line-height: 1.5rem;
     }
+    a{
+        color: #9499ff;
+        font-weight: 600;
+    }
 
 }
 }
-@include alert("alert-default", $errorBorder,$errorBg,$errorColor);
+@include alert("alert-default", $defaultBorder,$defaultBg,$defaultColor);
 @include alert("alert-info", $infoBorder,$infoBg,$infoColor);
 @include alert("alert-warning", $warningBorder,$warningBg,$warningColor);
 @include alert("alert-error", $errorBorder,$errorBg,$errorColor);
