@@ -1,24 +1,28 @@
 import { BellRing,X } from "lucide-react"
 import "./index.scss"
+import type { ReactNode } from "react";
 interface IProps {
-
+   type:string;  
+   icon:ReactNode ;
+   title:string;
+   description:string;     
 
 }
 
-const Alert = ({ }: IProps) => {
+const Alert = ({ type,icon,title,description}: IProps) => {
     return (
-        <div className="alert-danger">
+        <div className={type}>
             <div className="alert-header">
                 <div className="alert-title">
-                    <span><BellRing  /></span>
+                    <span>{icon}</span>
                     
-                    <h4>Alert Title</h4>
+                    <h4>{title}</h4>
                 </div>
                 
                  <X  className="close" size={25}/> 
             </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.</p>
+            <p>{description}</p>
 
 
         </div>
